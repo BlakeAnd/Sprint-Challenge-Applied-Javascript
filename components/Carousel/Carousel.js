@@ -4,7 +4,6 @@ class Carousel {
         this.buttonRight = document.querySelector('.right-button');
         this.buttonLeft = document.querySelector('.left-button');
         this.images = document.querySelectorAll('.caro-img');
-        
         this.images[0].style.display = 'flex';
         this.buttonRight.addEventListener('click', () => this.picChangeRight());
         this.count = 0;
@@ -12,7 +11,7 @@ class Carousel {
         this.buttonLeft.addEventListener('click', () => this.picChangeLeft());
     }
     picChangeRight(){
-        if(this.count < 3){
+        if(this.count < this.images.length-1 ){
         this.count = this.count + 1;
         }
         else{
@@ -27,7 +26,7 @@ class Carousel {
         this.count = this.count - 1;
         }
         else{
-            this.count = 3;
+            this.count = this.images.length-1 ;
         }
         this.images.forEach(image => image.style.display = 'none');
         this.images[this.count].style.display = 'flex';
