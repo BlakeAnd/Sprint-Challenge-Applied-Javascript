@@ -7,31 +7,30 @@ class Carousel {
         
         this.images[0].style.display = 'flex';
         this.buttonRight.addEventListener('click', () => this.picChangeRight());
-        this.countRight = 0;
+        this.count = 0;
 
         this.buttonLeft.addEventListener('click', () => this.picChangeLeft());
-        this.countLeft = 3;
     }
     picChangeRight(){
-        if(this.countRight < 3){
-        this.countRight = this.countRight + 1;
+        if(this.count < 3){
+        this.count = this.count + 1;
         }
         else{
-            this.countRight = 0;
+            this.count = 0;
         }
         this.images.forEach(image => image.style.display = 'none');
-        this.images[this.countRight].style.display = 'flex';
+        this.images[this.count].style.display = 'flex';
     }
 
     picChangeLeft(){
-        if(this.countLeft > 0){
-        this.countLeft = this.countLeft - 1;
+        if(this.count > 0){
+        this.count = this.count - 1;
         }
         else{
-            this.countLeft = 3;
+            this.count = 3;
         }
         this.images.forEach(image => image.style.display = 'none');
-        this.images[this.countLeft].style.display = 'flex';
+        this.images[this.count].style.display = 'flex';
     }
 }
 
