@@ -32,13 +32,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+Dodument Object Model. Structure that defines the way a document (html) gets accessed and manipulated (js)
+
 2. What is an event?
+
+Way to respond to changes on the page in js, usually to allow the user to interact. 
 
 3. What is an event listener?
 
+piece of code that looks for a certain kind of input from the user. 
+
 4. Why would we convert a NodeList into an Array?
 
+Arrays have more functionality such as .map and .filter.
+
 5. What is a component?
+
+Reusable piece of code combining multiple elements (in the general sense).
 
 ### Git Set up
 
